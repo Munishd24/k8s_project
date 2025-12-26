@@ -4,11 +4,11 @@ RUN dnf install -y httpd zip unzip && dnf clean all
 
 WORKDIR /var/www/html
 
-COPY photogenic.zip /tmp/photogenic.zip
+COPY photogenic-master.zip /tmp/photogenic-master.zip
 
-RUN unzip /tmp/photogenic.zip -d /tmp && \
+RUN unzip /tmp/photogenic-master.zip -d /tmp && \
     cp -rvf /tmp/photogenic/* /var/www/html/ && \
-    rm -rf /tmp/photogenic /tmp/photogenic.zip
+    rm -rf /tmp/photogenic /tmp/photogenic-master.zip
 
 EXPOSE 80
 
