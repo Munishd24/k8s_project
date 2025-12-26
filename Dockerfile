@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM rockylinux:9
 RUN yum install -y httpd \
 	zip\
 	unzip
