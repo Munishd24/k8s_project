@@ -7,8 +7,8 @@ WORKDIR /var/www/html
 COPY photogenic-master.zip /tmp/photogenic-master.zip
 
 RUN unzip /tmp/photogenic-master.zip -d /tmp && \
-    cp -rvf /tmp/photogenic/* /var/www/html/ && \
-    rm -rf /tmp/photogenic /tmp/photogenic-master.zip
+    cp -rvf /tmp/photogenic-master/* /var/www/html/ && \
+    rm -rf /tmp/photogenic-master /tmp/photogenic-master.zip
 
 EXPOSE 80
 
